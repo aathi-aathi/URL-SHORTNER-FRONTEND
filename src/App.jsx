@@ -8,6 +8,7 @@ import OutletRouter from './register/outlet'
 import ForgotPassword from './forgot-password/forgot-password'
 import ResetPassword from './forgot-password/reset-password'
 import UrlShortener from './home'
+import Verify from './register/verify'
 
 function App() {
   
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path='/' element={<OutletRouter/>}> 
             <Route index element={<Register/>}></Route>
+            <Route path='verify/:email' element={<Verify/>}></Route>
             <Route path='verify-account/:token' element={<VerifyAccount/>}></Route>
           </Route>
           <Route path='/login' element={<Login/>}></Route>

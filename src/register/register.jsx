@@ -43,7 +43,7 @@ const Register = () => {
          (setShowIncorrect(false))
       }, 3000);
         }else{
-            navigate("/login")
+            navigate(`verify/${formData.email}`)
         }
         
     };

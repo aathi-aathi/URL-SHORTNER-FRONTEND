@@ -67,4 +67,14 @@ const resetpassword = async(token,password)=>{
     const response = await fetch(`${backendURL}/short-url/${email}`)
     return await response.json()
  }
-export {postData,verifyUserData,loginData,forgotPassword,resetpassword,getShortUrl,getAllUrls}
+ const checkVerify =async(email)=>{
+    console.log(email)
+    const response = await fetch(`${backendURL}/verify/${email}`,{
+        method:"POST",
+        headers:{
+        "Content-Type":"application/json; charset=utf-8"
+    }
+}) 
+    return await response.json()
+}
+export {postData,verifyUserData,loginData,forgotPassword,resetpassword,getShortUrl,getAllUrls,checkVerify}
