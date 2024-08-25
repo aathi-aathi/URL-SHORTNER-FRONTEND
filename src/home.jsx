@@ -51,7 +51,7 @@ return (
       </form>
       
       {shortUrl && (
-        <p style={{color:'white'}}>
+        <p style={{color:'black'}}>
           Short URL: <a href={longUrl} onClick={getShortUrl} style={{color:'white'}} rel="noopener noreferrer">https://{shortUrl}</a>
         </p>
       )}
