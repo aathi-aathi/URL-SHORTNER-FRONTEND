@@ -44,7 +44,7 @@ const Login = () => {
 return (
     <>{showIncorrect &&  <div className="position-fixed p-1 text-danger border-top border-bottom border-danger  w-100"
        style={{top:"4%",left:"50%", transform: 'translate(-50%, -50%)',backgroundColor:"#ff000027",textAlign:"center"}} >{showText}</div>}
-    <div className="container">
+    <div className="container" style={{height:'100vh'}}>
       <div className="row justify-content-center">
         <div className="col-md-6">
           <div className="card mt-5" style={{border:"none"}}>
@@ -82,7 +82,7 @@ return (
                  
                 </div>
                 <button type="submit" className="btn btn-primary btn-block">
-                  Submit
+                  Login
                 </button>
                
                 <Link to="/" style={{float:"right"}}>Sign up</Link>

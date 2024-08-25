@@ -29,13 +29,13 @@ const ForgotPassword = () => {
   }
 
   return (
-    <div className="container mt-5">
+    <div className="container" >
       {mailSent &&  <div className="position-fixed p-1 text-success border-top border-bottom border-success  w-100"
        style={{top:"4%",left:"50%", transform: 'translate(-50%, -50%)',backgroundColor:"#33ff0031",textAlign:"center"}} >Email sent successfully!</div>}
       <div className="row justify-content-center">
         <div className="col-md-6">
        
-          <div className="card">
+          <div className="card mt-5">
          
             <div className="card-header">Gmail ID Verification</div>
             <div className="card-body">

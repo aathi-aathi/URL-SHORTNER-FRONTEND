@@ -9,9 +9,9 @@ import ForgotPassword from './forgot-password/forgot-password'
 import ResetPassword from './forgot-password/reset-password'
 import UrlShortener from './home'
 import Verify from './register/verify'
-
+import { useState } from 'react'
 function App() {
-  
+  const [count,setCount]=useState(0)
 
   return (
     <BrowserRouter>
@@ -24,7 +24,7 @@ function App() {
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/forgot-password' element={<ForgotPassword/>}></Route>
           <Route path='/reset-password' element={<ResetPassword/>}></Route>
-          <Route path='/home/:email' element={<UrlShortener/>}></Route>
+          <Route path='/home/:email' element={<UrlShortener count={count} setCount={setCount}/> } ></Route>
         </Routes>
     </BrowserRouter>
   )

@@ -1,0 +1,15 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+
+}
+.form-control{
+    background-color: rgb(222, 222, 253);
+}
+#root{
+    /* background-image: linear-gradient(to right, #b1b1e7,rgb(89, 89, 226)); 
+    height:100%; */
+    display: grid;
+    place-items: center;
+}

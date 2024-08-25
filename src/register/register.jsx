@@ -53,7 +53,7 @@ if(loading){
   </div>
 }
     return (
-        <div className="container mt-5">
+        <div className="container">
             {showIncorrect &&  <div className="position-fixed p-1 text-danger border border-danger  w-100"
        style={{top:"4%",left:"50%", transform: 'translate(-50%, -50%)',backgroundColor:"#ff000027",textAlign:"center"}} >
         Email  already exist! Please enter new Email </div>}
