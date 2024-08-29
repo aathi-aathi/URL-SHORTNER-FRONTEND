@@ -27,7 +27,7 @@ const UrlShortener = ({count,setCount}) => {
    },[count])
 return (
     <div className="container">
-      <h2 className="text-center mb-4 ">URL Shortener</h2>
+      <h2 className='app-title'>URL SHORTNER</h2>
       <form className="mb-4" onSubmit={handleSubmit}>
         <div className="form-group mb-2">
           <label htmlFor="longUrl" className='mb-2 ms-3' style={{color:'white',fontWeight:'bold'}}>Enter or Paste Your Long URL:</label>
@@ -39,28 +39,24 @@ return (
             onChange={(e) => setLongUrl(e.target.value)}
             placeholder="Enter your long URL here"
             required
-            style={{borderRadius:'30px',boxShadow:'0 0 5px rgba(0,0,0,0.2)',fontWeight:'bold'}}
+            style={{borderRadius:'30px',fontWeight:'bold'}}
           />
         </div>
-        <button type="submit" className="btn ms-2" 
-        style={{boxShadow:'0 0 5px rgba(0,0,0,0.2)',backgroundColor:'whitesmoke',color:'rgb(89, 89, 226)',fontWeight:'bold'}}>
-         
-          Shorten
-        </button>
+        <button type="submit" className="shorten-btn" > Shorten </button>
         
       </form>
       
-      {shortUrl && (
-        <p style={{color:'black'}}>
-          Short URL: <a href={longUrl} onClick={getShortUrl} style={{color:'black'}} rel="noopener noreferrer">https://{shortUrl}</a>
+      {shortUrl && ( 
+        <p style={{color:'blue'}}>
+          Short URL: <a href={longUrl} onClick={getShortUrl} style={{color:'blue'}} rel="noopener noreferrer">https://{shortUrl}</a>
         </p>
       )}
         
-        <table className="table">
+        <table className="table border">
           <thead>
             <tr>
-            <th>Short URL</th>
-              <th>Long URL</th>
+            <th style={{backgroundColor:'#8787e2',color:'white'}}>Short URL</th>
+              <th style={{backgroundColor:'#8787e2',color:'white'}}>Long URL</th>
               
             </tr>
           </thead>
@@ -68,8 +64,8 @@ return (
             
        {shortUrls.map((url,index)=>(
           <tr key={index}>
-            <td ><a href={longUrls[index]}>{url}</a></td>
-            <td><a href={longUrls[index]}  style={{wordBreak:'break-all'}}>{longUrls[index]}</a></td>
+            <td style={{backgroundColor:'whitesmoke'}}><a href={longUrls[index]}>{url}</a></td>
+            <td style={{backgroundColor:'whitesmoke'}}> <a href={longUrls[index]}  style={{wordBreak:'break-all'}}>{longUrls[index]}</a></td>
           </tr>
         ))} 
             </tbody>

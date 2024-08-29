@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { checkVerify } from "../api";
-
+import '../App.css'
 const Verify = () =>{
     const params = useParams()
     const navigate = useNavigate()
@@ -15,19 +15,13 @@ const CheckUser = async()=>{
   }
 }
     return(
-    <div style={{width:'100%',
+    <div className="verify-container" style={{width:'100%',
                      display:'flex',
-                     justifyContent:'center'}}>
-        <div 
-        style={{border:'1px solid orange',
-                borderRadius:'10px',
-                padding:'10px',
-                width:'95%',
-                maxWidth:'450px',
-                marginTop:'5rem',
-                backgroundColor:'#FFD49B'}}>
-                   <p style={{fontWeight:'bold',color:'orange'}}>Please Check your Gmail to verify your Account,Click here after verification..!</p> 
-                   <button className="btn" style={{backgroundColor:'orange',color:'white',fontWeight:'bold'}} onClick={CheckUser}>Click Here</button>
+                     justifyContent:'center',
+                     height:'100vh'}}>
+        <div className="verify-div">
+                   <p style={{fontWeight:'bold',color:'white'}}>Please Check your Gmail to verify your Account,Click here after verification..!</p> 
+                   <button className="verify-btn" onClick={CheckUser}>Click Here</button>
         </div>
     </div>
     )
