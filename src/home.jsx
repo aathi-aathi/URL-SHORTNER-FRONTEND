@@ -52,7 +52,7 @@ return (
       
       {shortUrl && (
         <p style={{color:'black'}}>
-          Short URL: <a href={longUrl} onClick={getShortUrl} style={{color:'white'}} rel="noopener noreferrer">https://{shortUrl}</a>
+          Short URL: <a href={longUrl} onClick={getShortUrl} style={{color:'black'}} rel="noopener noreferrer">https://{shortUrl}</a>
         </p>
       )}
         
